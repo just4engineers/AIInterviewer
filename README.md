@@ -29,7 +29,7 @@ To get started with the project, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/ai-mock-interviewer.git
+    git clone https://github.com/just4engineers/AIInterviewer
     cd ai-mock-interviewer
     ```
 
@@ -113,7 +113,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Deployed Application
 
-Check out the live application [here](https://ai-mock-interviewer-mntzw67eq-haseeb-ahsans-projects.vercel.app/dashboard).
+Check out the live application [here](https://github.com/just4engineers/AIInterviewer/dashboard).
 
 ---
 

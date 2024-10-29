@@ -20,32 +20,18 @@ function Header() {
         alt='logo'
         className='ml-5'
       />
-      <ul className='hidden md:flex gap-6'>
-        <Link href={'/dashboard'}>
-          <li
-            className={`hover:text-primary hover:font-bold transition-all cursor-pointer
-        ${path == '/dashboard' && 'text-primary font-bold'}`}
-          >
-            Dashboard
-          </li>
-        </Link>
-        <li
-          className={`hover:text-primary hover:font-bold transition-all cursor-pointer
-        ${path == '/dashboard/questions' && 'text-primary font-bold'}`}
-        >
-          Questions
+      <ul class="hidden md:flex gap-6">
+        <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+          <a href="/how-it-works">How it Works?</a>
         </li>
-        <li
-          className={`hover:text-primary hover:font-bold transition-all cursor-pointer
-        ${path == '/dashboard/upgrade' && 'text-primary font-bold'}`}
-        >
-          Upgrade
+        <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+          <a href="http://127.0.0.1:8000/">Resume Parser</a>
         </li>
-        <li
-          className={`hover:text-primary hover:font-bold transition-all cursor-pointer
-        ${path == '/dashboard/how' && 'text-primary font-bold'}`}
-        >
-          How it Works?
+        <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+          <a href="http://localhost:5173/">Quiz</a>
+        </li>
+        <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+          <a href="http://localhost:3000/dashboard">Interview Dashboard</a>
         </li>
       </ul>
       <UserButton />

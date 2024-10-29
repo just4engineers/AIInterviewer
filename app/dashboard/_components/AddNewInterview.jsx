@@ -48,12 +48,23 @@ function AddNewInterview() {
       'like {Question: , Answer: }';
 
     const result = await chatSession.sendMessage(InputPrompt);
-    const MockJsonResp = result.response
-      .text()
+    const rawResponse = await result.response.text();
+    const MockJsonResp = rawResponse
       .replace('```json', '')
-      .replace('```', '');
-    console.log('respai', JSON.parse(MockJsonResp));
-    setJsonResponse(MockJsonResp);
+      .replace('```', '')
+      .trim();
+
+    console.log('MockJsonResp:', MockJsonResp);
+
+    try {
+      const parsedResponse = JSON.parse(MockJsonResp);
+      console.log('respai', parsedResponse);
+      setJsonResponse(parsedResponse); // Store parsed JSON in state
+    } catch (error) {
+      console.error('JSON Parsing Error:', error);
+      setLoading(false);
+      return;
+    }
 
     if (MockJsonResp) {
       const resp = await db
@@ -80,6 +91,7 @@ function AddNewInterview() {
 
     setLoading(false);
   };
+
   return (
     <div>
       <div
